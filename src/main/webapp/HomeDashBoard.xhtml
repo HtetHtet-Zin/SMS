@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      <ui:composition template="./layout/commonTemplate.xhtml">
+          <ui:define name="head">
+              <h:head>
+              </h:head>
+              <title><h:outputText value="#{msg['title.sms']}" /></title>
+          </ui:define>
+          <ui:define name="title">
+              <!-- to add the duplicate login Authentication. -->
+<!--              <script type="text/javascript">-->
+<!--                  function checkUserName()-->
+<!--                  {-->
+<!--                      if('#{HomeMenuFormBean.userInfoBean.fullName}' == "")-->
+<!--                      {-->
+<!--                           document.getElementById('HOME_MENU_TITLE:checkLoginPerson').click();-->
+<!--                      }-->
+<!--                  }-->
+<!--              </script>-->
+              <h:form id="HOME_MENU_TITLE">
+                  <div id="main">
+                      <div id="main_countents">
+                          <!-- #65A5D1 -->
+                          <div class="banner_style">
+
+                              <!-- &nbsp;&nbsp;<img src="../img/small_logo.jpg"
+                                  style="width: 20px; height: 10px; padding-top: 10px; background-color: #FFFFCC" /> -->
+                              <span style="vertical-align: middle;"><h:outputLabel
+                                      styleClass="header_title"
+                                      value="Here is title" /></span>
+
+                              <div class="header_link_cover">
+
+                                  <h:commandLink styleClass="header_link" value="USEFUL TIPS" action="#" />
+
+                                  <h:outputLabel value=" | " style="color:white;font-weight: bold;" />
+
+                                  <h:commandLink styleClass="profile"
+                                                 value="#{userInfoBean.fullName}"
+                                                 action="#" />
+
+                                  <h:outputLabel value=" | " style="color:white;font-weight: bold;" />
+
+                                  <h:commandLink styleClass="header_link" value="LOGOUT" action="#{loginBean.logout()}" icon="ui-icon-extlink" />
+<!--                                  <ui:include src="./layout/commonLogoutLink.xhtml" />-->
+
+                                  <!--to add the duplicate login Authentication. -->
+                                  <h:commandButton id="checkLoginPerson" action="#" style="display: none" />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </h:form>
+              <script>
+              </script>
+          </ui:define>
+          <ui:define name="body">
+              <h:outputText value="Home Dashboard ( Login Successful )" />
+          </ui:define>
+
+      </ui:composition>
+
+        </html>

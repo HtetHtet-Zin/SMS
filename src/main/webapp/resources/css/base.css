@@ -1,0 +1,18 @@
+/***************************************************************************
+ * $Create Date: 2017-06-28 $
+ * $Created By: Ye` Win $
+ * $Rev: 2.0 $
+ * $Revision Explanation: Revised for No:13 of code development history file.
+ * Copyright (c) 2017 DIR-ACE Technology Ltd. All Rights Reserved.
+ *************************************************************************/
+HTML {
+	
+}
+BODY {
+	width:100%;
+	overflow: auto;
+	MARGIN: 0px; 
+	FONT-SIZE: 12px;
+	FONT-FAMILY:Zawgyi-One;	
+	background-color:  #FFFFFF;/* #333333; #00665E*/
+}

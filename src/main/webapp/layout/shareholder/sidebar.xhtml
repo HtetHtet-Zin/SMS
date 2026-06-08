@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--***********************************************************************
+ * $Date: 2021/01/21$
+ * $Author:  25-00122 $
+ * $Rev 1.0 $
+ * Copyright (c) 2013 DIR-ACE Technology Ltd. All Rights Reserved.
+ ***********************************************************************-->
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jstl/core" contentType="text/html">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<body>
+	<h:form id="side_bar" styleClass="sidebar toggled">
+		<!-- Sidebar -->
+		<ul class="navbar-nav sidebar toggled" id="accordionSidebar">
+			<!-- Sidebar - Brand -->
+			
+			<li>
+			<h:commandLink value="" class="sidebar-brand d-flex align-items-center justify-content-center"
+					 action="#{ShrhldMenuFormBean.home()}">
+			<!-- <a href="javascript:;"
+				class="sidebar-brand d-flex align-items-center justify-content-center"> -->
+				
+				
+					<div class="sidebar-brand-icon">
+					
+					<img src="../img/shareholder/logo.png" alt="Logo"
+							class="img-fluid"/>
+					
+						
+					</div>
+					
+			<!-- </a> -->
+			</h:commandLink>
+			</li>
+			
+			<li>
+				<!-- Divider -->
+				<hr class="sidebar-divider"></hr>
+			</li>
+			<!-- Nav Item - Home -->
+			<li class="nav-item"><h:commandLink value=""
+					styleClass="nav-link" action="#{ShrhldMenuFormBean.home()}">
+					<i class="sms-icon-home"></i><span>#{msg['title.shareholder.home']}</span>
+				</h:commandLink></li>
+			<!-- Nav Item - Share Trading -->
+			<li class="nav-item"><a class="nav-link collapsed" href="#"
+				data-toggle="collapse" data-target="#shareTrading"
+				aria-expanded="true" aria-controls="shareTrading"> <i
+					class="sms-icon-trading"></i><span>#{msg['title.share.trading']}</span>
+			</a>
+				<div id="shareTrading" class="collapse shadow"
+					aria-labelledby="shareTrading" data-parent="#accordionSidebar">
+					<div class="sidebarDropdown collapse-inner">
+						<h:commandLink value="#{msg['title.buyorder']}"
+							styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.buyOrder()}">
+						</h:commandLink>
+						<h:commandLink value="#{msg['title.sellorder']}"
+							styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.sellOrder()}">
+						</h:commandLink>
+					</div>
+				</div></li>
+			<!-- Nav Item - Payment/Dividend -->
+			<li class="nav-item"><a class="nav-link collapsed" href="#"
+				data-toggle="collapse" data-target="#paymentDividend"
+				aria-expanded="true" aria-controls="paymentDividend"> <i
+					class="sms-icon-payment-dividend"></i><span>#{msg['title.payment.dividend']}</span>
+			</a>
+				<div id="paymentDividend" class="collapse shadow"
+					aria-labelledby="paymentDividend" data-parent="#accordionSidebar">
+					<div class="sidebarDropdown collapse-inner">
+						<h:commandLink value="#{msg['title.dividend']}" styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.dividendPayment()}">
+						</h:commandLink>
+						<h:commandLink value="#{msg['title.paidup.capital']}" styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.paidUpCapital()}">
+						</h:commandLink>
+					</div>
+				</div></li>
+			<!-- Nav Item - Report -->
+			<li class="nav-item"><a class="nav-link collapsed" href="#"
+				data-toggle="collapse" data-target="#report" aria-expanded="true"
+				aria-controls="report"> <i class="sms-icon-file-fill"></i><span>#{msg['title.reports']}</span>
+			</a>
+				<div id="report" class="collapse shadow" aria-labelledby="report"
+					data-parent="#accordionSidebar">
+					<div class="sidebarDropdown collapse-inner">
+						<h:commandLink value="#{msg['title.transferring']}" styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.transferring()}">
+						</h:commandLink>
+						<h:commandLink value="#{msg['title.certificate']}" styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.certificate()}">
+						</h:commandLink>
+						<h:commandLink value="#{msg['title.share.balance']}" styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.shareBalance()}">
+						</h:commandLink>
+						<h:commandLink value="#{msg['title.order']}" styleClass="collapse-item"
+							action="#{ShrhldMenuFormBean.order()}">
+						</h:commandLink>
+					</div>
+				</div></li>
+			<!-- Nav Item - Contact -->
+			<li class="nav-item"><h:commandLink value=""
+					styleClass="nav-link" action="#{ShrhldMenuFormBean.contactUs()}">
+					<i class="sms-icon-contact"></i><span>#{msg['title.contact.us']}</span>
+				</h:commandLink></li>
+			<!-- Nav Item - Tips -->
+			<li class="nav-item d-md-none"><h:commandLink value=""
+					styleClass="nav-link" action="#{ShrhldMenuFormBean.tips()}">
+					<i class="sms-icon-tips"></i>
+					<span>#{msg['title.tips']}</span>
+				</h:commandLink></li>
+			<!-- Nav Item - Logout -->
+			<li class="nav-item d-md-none"><h:commandLink value=""
+					styleClass="nav-link" action="#{LoginFormBean.Logout()}">
+					<i class="sms-icon-logout"></i>
+					<span>#{msg['link.logout']}</span>
+				</h:commandLink></li>
+		</ul>
+		<!-- End of Sidebar -->
+	</h:form>
+</body>
+	</html>
+</f:view>

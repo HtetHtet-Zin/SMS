@@ -1,0 +1,30 @@
+//Confirm dialog style
+
+.confirm-dialog{
+	border: 1px solid;
+	min-width: 30%;
+	max-width: 70%;
+	
+	//dialog message content style
+	.dialog-content{
+		padding: 5px;
+		
+		//message style
+		.dialog-message{
+			white-space: pre-line; 
+			line-height: 1.5em;
+		}
+		
+	}
+	
+	//dialog action style
+	.dialog-action{
+		padding: 5px;
+	}
+	
+	//dialog header style
+	.ui-dialog-titlebar.ui-widget-header{
+		display: none;
+	}
+	
+}

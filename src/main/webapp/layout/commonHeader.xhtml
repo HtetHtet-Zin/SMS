@@ -1,0 +1,295 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <f:view xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:ui="jakarta.faces.facelets"
+            xmlns:f="jakarta.faces.core"
+            xmlns:h="jakarta.faces.html"
+            xmlns:p="http://primefaces.org/ui"
+            contentType="text/html">
+		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<h:head>
+		<ui:insert name="head" />
+	
+	</h:head>
+	
+	<body>
+		<form jsfc="h:form" id="header">
+
+			<h:panelGroup id="loginPanel" rendered="#{!LoginFormBean.flag}">
+				<div id="login_img">
+					<table class="login_content" width="100%">
+						<tr>
+							<td align="left" style="padding: 0px 0px 0px 0px;"><img src="../resources/img/banner1.jpg" width="1208"/></td>
+						</tr>
+	
+					</table>
+				</div>
+			</h:panelGroup>
+	
+	
+			<div id="menu">
+				<ul id="nav">
+					<li ><h:commandLink ajax="true" immediate="true"
+							oncomplete="hideContent(false)" value="HOME"
+							action="#" />
+						<ul class="nav first">
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="CURRENT PRICE"
+									action="#" />
+							</li>
+						</ul></li>
+	
+					<!-- YPP 
+	           20/5/2014 
+	           changing subMenu Position -->
+	
+					<li >REGISTRATION
+						<ul class="nav first">
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="USER"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="USER ROLE"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="SHARE TYPE"
+									action="#" />
+							</li>
+							
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="SHAREHOLDER TYPE"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="SHARE TICK SIZE"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="SHARE ISSUING"
+									action="#" />
+							</li>
+							
+							<li class = "sub_menu">SHAREHOLDER
+								<ul class="nav">
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="INDIVIDUAL"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="Joint"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="CORPORATE"
+											action="#" />
+									</li>
+								</ul>
+							</li>
+							
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="#{msg['title.FiscalYear']}"
+									action="#" />
+							</li>
+							
+						</ul>
+					</li>
+					<!-- End -->
+	
+					<li >SHARE TRADING
+						<ul class="nav first">
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="First Time Selling (IPO)"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent" value="TRANSFERRING"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="BUY ORDER"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="SELL ORDER"
+									action="#" />
+							</li>
+						</ul>
+					</li>
+	
+					<li >PAYMENT/DIVIDEND
+						<ul class="nav first">
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="DIVIDEND AMOUNT"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="DIVIDEND PAYMENT"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="PAID UP CAPITAL"
+									action="#" />
+							</li>
+						</ul>
+					</li>
+					<li >REPORT
+						<ul class="nav first">
+							<li class = "sub_menu">CSV
+								REPORTS
+								<ul class="nav">
+									<li class = "sub_menu">SHAREHOLDER
+										<ul class="nav">
+											<li style="text-align: left; ">
+												<h:commandLink ajax="true" immediate="true"
+													oncomplete="hideContent(false)" value="INFORMATION"
+													action="#" />
+											</li>
+											<li style="text-align: left; ">
+												<h:commandLink ajax="true" immediate="true"
+													oncomplete="hideContent(false)" value="ACTIVE/INACTIVE"
+													action="#" />
+											</li>
+										</ul>
+									</li>
+	
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="TRANSFERRED SHARES"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="CERTIFICATE"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="SHARE BALANCE"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="ORDER"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="CUR-PRICE HISTORY"
+											action="#" />
+									</li>
+	
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="PRINT HISTORY"
+											action="#" />
+									</li>
+									<li style="text-align: left; "><h:commandLink
+											value="DIVIDEND" action="#" /></li>
+									<li style="text-align: left; "><h:commandLink
+											value="INCOME" action="#" /></li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="IPO CANCEL HISTORY"
+											action="#" />
+									</li>
+								</ul>
+							</li>
+							<li class = "sub_menu">FORM
+								REPORTS
+								<ul class="nav">
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="SHARE LIST FORM"
+											action="#" />
+									</li>
+									<!-- HSD Share Register Start -->
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="SHARE REGISTERED FORM"
+											action="#" />
+									</li>
+									<!-- HSD Share Register End -->
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="CBM FORM"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="DIVIDEND FORM"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="FORM VI-CBM"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="FORM VI"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="FORM E"
+											action="#" />
+									</li>
+									<li style="text-align: left; ">
+										<h:commandLink ajax="true" immediate="true"
+											oncomplete="hideContent(false)" value="SHARE TRANSFER FORM"
+											action="#" />
+									</li>									
+								</ul>
+							</li>
+	
+						</ul>
+					</li>
+	
+					<li >SETTINGS
+						<ul class="nav first">
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="EXISTING DATA"
+									action="#" />
+							</li>
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="COMPANY ACCOUNT"
+									action="#" />
+							</li>
+	
+							<li style="text-align: left; ">
+								<h:commandLink ajax="true" immediate="true"
+									oncomplete="hideContent(false)" value="DATA SETTING"
+									action="#" />
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- </div> -->
+			<div id="main_nav2"></div>
+	
+		</form>
+	</body>
+		</html>
+	</f:view>

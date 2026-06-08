@@ -1,0 +1,11 @@
+.jcf-select>.ui-helper-hidden-accessible {
+	position: relative !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger {
+	width: auto !important;
+}
+
+.main-table-container .jcf-select{
+	width:100px;
+}

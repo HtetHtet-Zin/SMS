@@ -1,0 +1,113 @@
+/***************************************************************************
+ * $Create Date: 2017-06-29 $
+ * $Created By: Aung Htay Oo $
+ * $Rev: 2.0 $
+ * $Revision Explanation: Revised for No:13 of code development history file.
+ * Copyright (c) 2017 DIR-ACE Technology Ltd. All Rights Reserved.
+ *************************************************************************/
+#login_body{
+	
+	background-color:  #DCE6F1;/* #333333; #00665E*/
+	background-image: url("../img/loginBackground.jpg");
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.myButton {
+        
+        -moz-box-shadow:inset 0px 0px 14px -3px #f2fadc;
+        -webkit-box-shadow:inset 0px 0px 14px -3px #f2fadc;
+        box-shadow:inset 0px 0px 14px -3px #f2fadc;
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dbe6c4), color-stop(1, #9ba892));
+        background:-moz-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+        background:-webkit-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+        background:-o-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+        background:-ms-linear-gradient(top, #dbe6c4 5%, #9ba892 100%);
+        background:linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dbe6c4', endColorstr='#9ba892',GradientType=0);
+        
+        background-color:#dbe6c4;
+        
+        -moz-border-radius:9px;
+        -webkit-border-radius:9px;
+        border-radius:9px;
+        
+        border:1px solid #b2b8ad;
+        
+        display:inline-block;
+        color:#2a6851;
+        font-family:arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:3px 24px;
+        text-decoration:none;
+        
+        text-shadow:0px 1px 0px #ced9bf;
+        width: 145px;
+        
+        
+    }
+    .myButton:hover {
+        
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9ba892), color-stop(1, #dbe6c4));
+        background:-moz-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+        background:-webkit-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+        background:-o-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+        background:-ms-linear-gradient(top, #9ba892 5%, #dbe6c4 100%);
+        background:linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9ba892', endColorstr='#dbe6c4',GradientType=0);
+        
+        background-color:#9ba892;
+        width: 145px;
+        
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
+
+
+h2 {
+  font: 100 30px/1.0 'Just Another Hand', Helvetica, sans-serif;
+  color: #969595;
+  text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px #3c3c3c, 0px 9px 0px #2b2b2b, 3px 8px 15px rgba(0,0,0,0.1), 3px 8px 5px rgba(0,0,0,0.3);
+}
+
+/*********************************************************************************/
+/* Login Button style.                                                              */
+/*********************************************************************************/
+.lgn_btn {
+	
+    width: 90px !important;
+    height: 28px !important;
+   
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5DCFC3',endColorstr='#5DCFC3', GradientType=0) !important;
+	-moz-border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	border-radius: 5px !important;
+	border: 1px solid #34669A !important;
+	display: inline-block !important;
+	font-size: 12px !important;
+	font-family:arial;
+	font-weight: bold !important;
+	
+	
+}
+
+.lgn_btn:hover {
+   border-top-color: #34669A; 
+   background:  #aed6f1;
+   color: #34669A;
+   }
+
+/*********************************************************************************/
+/* Login text style.                                                              */
+/*********************************************************************************/
+.lgn_textbox {
+	width: 15em !important;
+	height: 17px !important;
+}
+

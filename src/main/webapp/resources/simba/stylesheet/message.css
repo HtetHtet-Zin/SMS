@@ -1,0 +1,8 @@
+/** Displaying Error background Color for Single Point Check. **/
+.error {
+	background-color: red;
+	
+}
+.ui-state-error {
+	border-color: red !important;
+}

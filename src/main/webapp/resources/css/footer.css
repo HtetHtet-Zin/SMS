@@ -1,0 +1,21 @@
+/***************************************************************************
+ * $Create Date: 2017-06-28 $
+ * $Created By: Ye` Win $
+ * $Rev: 2.0 $
+ * $Revision Explanation: Revised for No:13 of code development history file.
+ * Copyright (c) 2017 DIR-ACE Technology Ltd. All Rights Reserved.
+ *************************************************************************/
+#copyright_div{
+	text-align: center;
+}
+
+#copyright_div img{
+	width: 100%; 
+	height : 45px;
+}
+
+#copyright_div span{
+	position: relative; 
+	top: -33px; 
+	color:white;
+}

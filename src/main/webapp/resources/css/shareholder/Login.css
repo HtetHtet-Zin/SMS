@@ -1,0 +1,40 @@
+jcf-select>.ui-helper-hidden-accessible {
+	position: absolute !important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger {
+	width: auto !important;
+}
+
+.jcf-select .jcf-select-text,.jcf-select .jcf-select-opener {
+	top: 15px !important;
+}
+
+.ui-selectonemenu {
+	width: 100% !important;
+}
+
+.jcf-select .ui-inputfield {
+	width: 100% !important;
+	height: 40px !important;
+	background: transparent !important;
+	line-height: 40px !important;
+	padding: 0em 1em !important;
+	color: var(--placeholder-text);
+	box-shadow: none !important;
+	font-size: 0.9em;
+}
+
+.jcf-select .ui-corner-right {
+	line-height: 40px;
+	height: 40px;
+	padding-top: 9px;
+	background: transparent;
+	border: none;
+	box-shadow: none !important;
+}
+
+#msg-area>div {
+	display: table;
+	margin: auto;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--***********************************************************************
+ * $Date: 2021/01/21$
+ * $Author:  25-00122 $
+ * $Rev 1.0 $
+ * Copyright (c) 2013 DIR-ACE Technology Ltd. All Rights Reserved.
+ ***********************************************************************-->
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jstl/core" contentType="text/html">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<h:head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+</h:head>
+<body>
+	<h:form id="nav">
+		<nav class="navbar navbar-expand topbar"> 
+			<!-- Sidebar Toggle (Topbar) For Mobile Start -->
+			<button title="Sidebar Toggle (Topbar) For Mobile" type="button" id="sidebarToggleTop" class="d-md-none">
+				<i class="sms-icon-menu"></i>
+			</button>
+			<!-- Sidebar Toggle (Topbar) For Mobile End  -->
+			<h4 class="heading-text sms-heading">Share Management System</h4>
+			<ul class="navbar-nav ml-auto">
+				<li>
+					<div class="topbar-divider d-none d-sm-block"></div>
+				</li>
+	
+				<!-- Theme Switcher Start -->
+					<li class="theme-switch-wrapper">
+						<label class="theme-switch" for="checkbox">
+							<input type="checkbox" id="checkbox" />
+							<div id="theme-switch-icon" class="sms-icon-dark"></div>
+						</label>
+					</li>
+				<!-- Theme Switcher End -->
+				
+				<li>
+					<div class="topbar-divider d-none d-sm-block"></div>
+				</li>
+				<!-- Nav Item - User Information Start -->
+				<li class="nav-item dropdown">
+					<!-- <a
+					class="nav-link dropdown-toggle" href="#" id="userDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <span class="mr-2 small">Shareholder
+							ID - <span class="link-primary-text">100100001</span>
+					</span>
+				</a> --> <h:commandLink value="" styleClass="nav-link"
+						action="#{ShrhldMenuFormBean.changePass()}">
+						<span class="mr-2 small">Shareholder ID - <span
+							class="link-primary-text"><h:outputText value="#{clientInfoBean.userName}" /></span></span>
+					</h:commandLink> <h:commandLink value="" styleClass="nav-link"
+						action="#{ShrhldMenuFormBean.tips()}">
+						<div class="d-none d-lg-inline small">
+							<i class="sms-icon-tips"></i> <span>#{msg['title.tips']}</span>
+						</div>
+					</h:commandLink> <h:commandLink value="" styleClass="nav-link"
+						action="#{LoginFormBean.Logout()}">
+						<div class="d-none d-lg-inline small">
+							<i class="sms-icon-logout"></i> <span>#{msg['link.logout']}</span>
+						</div>
+					</h:commandLink> <!-- Dropdown - User Information Start --> <!-- <div class="dropdown-menu dropdown-menu-right shadow"
+						aria-labelledby="userDropdown">
+						<a class="dropdown-item" href="#"> Action Link </a> <a
+							class="dropdown-item" href="#"> Action Link </a> <a
+							class="dropdown-item" href="#"> Action Link </a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#"> Action Link </a>
+					</div> --> <!-- Dropdown - User Information End -->
+				</li>
+				<!-- Nav Item - User Information End -->
+			</ul>
+		</nav>
+	</h:form>
+</body>
+	</html>
+</f:view>

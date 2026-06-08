@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/mixins";
+
+// 2. Cendors
+@import "vendors/bootstrap4/bootstrap.scss", "vendors/custom-form",
+  "vendors/sms-icon", "vendors/normalize";
+
+// 3. Base
+@import "base/base", "base/keyframes", "base/typography";
+
+// 4. Layout
+@import "layout/global", "layout/sidebar", "layout/topbar", "layout/footer",
+  "layout/responsive";
+
+// 5. Components
+@import "components/card", "components/input", "components/select",
+  "components/buttons", "components/number", "components/radio",
+  "components/check", "components/datepicker", "components/pagination", "components/table";
+
+// 6. Pages
+@import "pages/login", "pages/tips", "pages/changepassword", "pages/buy-order",
+  "pages/dividend", "pages/contact","pages/dialog";
+
+// 7. Theme
+@import "theme/default";
