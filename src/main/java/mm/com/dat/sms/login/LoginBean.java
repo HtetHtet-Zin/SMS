@@ -56,7 +56,6 @@ public class LoginBean implements Serializable {
             UserInfoBean.setLoginName(user.getLoginName());
             UserInfoBean.setFullName(user.getFullName());
             UserInfoBean.setRoleId(Integer.parseInt(user.getRoleId()));
-            System.out.println("Full Name:"+user.getFullName());
             return "HomeDashBoard.xhtml?faces-redirect=true";
 
         } else {
