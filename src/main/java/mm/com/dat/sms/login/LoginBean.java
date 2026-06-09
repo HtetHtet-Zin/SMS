@@ -11,7 +11,7 @@ import jakarta.faces.context.FacesContext;
 import lombok.Getter;
 import lombok.Setter;
 import mm.com.dat.sms.user.AuthService;
-import mm.com.dat.sms.user.User;
+import mm.com.dat.sms.dto.UserDto;
 import mm.com.dat.sms.user.UserInfoBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -28,7 +28,7 @@ import java.util.ResourceBundle;
  * <p>
  * </p>
  *
- * @author
+ * @author hhz
  */
 
 @Component
@@ -51,7 +51,7 @@ public class LoginBean implements Serializable {
 
         FacesContext context = FacesContext.getCurrentInstance();
         ResourceBundle bundle = ResourceBundle.getBundle("messages", Locale.ENGLISH);
-        User user = authService.authenticate(username);
+        UserDto user = authService.authenticate(username);
         if (user != null && BCrypt.checkpw(password, user.getPassword())) {
             UserInfoBean.setLoginName(user.getLoginName());
             UserInfoBean.setFullName(user.getFullName());

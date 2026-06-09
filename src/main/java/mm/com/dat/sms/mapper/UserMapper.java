@@ -6,7 +6,7 @@
  * *************************************************************/
 package mm.com.dat.sms.mapper;
 
-import mm.com.dat.sms.user.User;
+import mm.com.dat.sms.dto.UserDto;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.repository.query.Param;
 
@@ -20,5 +20,5 @@ import org.springframework.data.repository.query.Param;
 @Mapper
 public interface UserMapper {
 
-    User findUser(@Param("username")String username);
+    UserDto findUser(@Param("username")String username);
 }
