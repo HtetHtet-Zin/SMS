@@ -4,7 +4,7 @@
  * Version      : 	
  * History  :	
  * *************************************************************/
-package mm.com.dat.sms.user;
+package mm.com.dat.sms.dto;
 
 
 import lombok.Data;
@@ -17,7 +17,7 @@ import lombok.Data;
  * @author
  */
 @Data
-public class User {
+public class UserDto {
 
     private String userId;
     private String loginName;

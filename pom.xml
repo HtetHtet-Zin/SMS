@@ -17,7 +17,6 @@
     <artifactId>sms</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <!-- WAR for JBoss/WildFly -->
     <packaging>war</packaging>
 
     <properties>
@@ -44,18 +43,11 @@
             <artifactId>primefaces-spring-boot-starter</artifactId>
             <version>5.4.3</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.glassfish</groupId>-->
-<!--            <artifactId>jakarta.faces</artifactId>-->
-<!--        </dependency>-->
-
-        <!-- MyBatis -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>${mybatis.version}</version>
         </dependency>
-        <!-- Servlet API (for WAR deployment) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -89,6 +81,7 @@
     </dependencies>
 
     <build>
+        <finalName>sms</finalName>
         <plugins>
 
             <!-- Spring Boot plugin -->

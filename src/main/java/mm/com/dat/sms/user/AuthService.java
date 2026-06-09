@@ -6,6 +6,7 @@
  * *************************************************************/
 package mm.com.dat.sms.user;
 
+import mm.com.dat.sms.dto.UserDto;
 import mm.com.dat.sms.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class AuthService {
     @Autowired
     private UserMapper userMapper;
 
-    public User authenticate(String username) {
+    public UserDto authenticate(String username) {
         return userMapper.findUser(username);
     }
 }
